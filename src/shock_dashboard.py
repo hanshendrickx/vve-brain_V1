@@ -1,1 +1,1 @@
-Shock Dashboard Module 
+"""Shock Dashboard Module"""

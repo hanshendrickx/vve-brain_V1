@@ -1,1 +1,1 @@
-Recovery Plan Generator 
+"""Recovery Plan Generator"""

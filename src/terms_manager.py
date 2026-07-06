@@ -1,1 +1,1 @@
-Governance Terms Manager 
+"""Governance Terms Manager"""

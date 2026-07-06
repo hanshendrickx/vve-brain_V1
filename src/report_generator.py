@@ -1,1 +1,1 @@
-Report Generator Module 
+"""Report Generator Module"""

@@ -1,1 +1,1 @@
-Professional Balance Sheet Generator 
+"""Professional Balance Sheet Generator"""
