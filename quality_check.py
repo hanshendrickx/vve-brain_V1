@@ -58,12 +58,12 @@ class QualityChecker:
         
         # Run black in check mode
         success, output = self.run_command(
-            "uv run black --check src/ tests/ --quiet",
+            "uv run black --check --target-version py313 src/ tests/ --quiet",
             "Black (check mode)"
         )
         
         if not success:
-            print("\n💡 To auto-format, run: uv run black src/ tests/")
+            print("\n💡 To auto-format, run: uv run black --target-version py313 src/ tests/")
         
         self.results["black"]["status"] = "✅" if success else "❌"
         self.results["black"]["output"] = output
@@ -150,7 +150,7 @@ class QualityChecker:
             # Auto-fix suggestions
             print("\n💡 Suggested fixes:")
             if not black_ok:
-                print("   - Run: uv run black src/ tests/")
+                print("   - Run: uv run black --target-version py313 src/ tests/")
             if not ruff_ok:
                 print("   - Run: uv run ruff check --fix src/ tests/")
             if not tests_ok:
@@ -184,7 +184,7 @@ class QualityChecker:
         
         # Black auto-format
         print("\n📋 Running Black auto-format...")
-        subprocess.run("uv run black src/ tests/", shell=True, cwd=self.project_root)
+        subprocess.run("uv run black --target-version py313 src/ tests/", shell=True, cwd=self.project_root)
         
         # Ruff auto-fix
         print("\n📋 Running Ruff auto-fix...")
