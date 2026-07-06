@@ -1,0 +1,9 @@
+# Python 
+__pycache__/ 
+.venv/ 
+*.pyc 
+uv.lock 
+*.db 
+reports/*.png 
+reports/*.html 
+reports/*.pdf 
