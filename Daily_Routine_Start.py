@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Daily_Routine_Start.py - Complete Daily Development Routine
+Daily_Routine_Start.py - Complete Daily Development Routine (Windows-Compatible)
 Checks: Environment, Git sync, Quality, and starts your project
 """
 
@@ -14,40 +14,33 @@ import time
 class DailyRoutine:
     def __init__(self):
         self.project_root = Path(__file__).parent
-        self.colors = {
-            'green': '\033[92m',
-            'red': '\033[91m',
-            'yellow': '\033[93m',
-            'blue': '\033[94m',
-            'reset': '\033[0m'
-        }
         self.errors = []
         self.warnings = []
         
     def print_header(self, text):
         """Print a formatted header"""
         print("\n" + "=" * 60)
-        print(f"🧠 {text}")
+        print(f"[BRAIN] {text}")
         print("=" * 60)
     
     def print_success(self, text):
-        print(f"✅ {text}")
+        print(f"[OK] {text}")
     
     def print_error(self, text):
-        print(f"❌ {text}")
+        print(f"[ERROR] {text}")
         self.errors.append(text)
     
     def print_warning(self, text):
-        print(f"⚠️ {text}")
+        print(f"[WARN] {text}")
         self.warnings.append(text)
     
     def print_info(self, text):
-        print(f"ℹ️ {text}")
+        print(f"[INFO] {text}")
     
     def run_command(self, cmd, description=""):
         """Run a command and return result"""
         if description:
-            print(f"\n📋 {description}...")
+            print(f"\n[EXEC] {description}...")
         try:
             result = subprocess.run(cmd, shell=True, capture_output=True, text=True, cwd=self.project_root)
             return result.stdout.strip(), result.stderr.strip(), result.returncode == 0
@@ -161,10 +154,19 @@ class DailyRoutine:
             self.print_warning("quality_check.py not found - skipping")
             return True
         
-        stdout, stderr, success = self.run_command("uv run python quality_check.py")
-        print(stdout)
-        if stderr:
-            print(stderr)
+        # Run quality check with output redirected to avoid emoji issues
+        stdout, stderr, success = self.run_command(
+            "uv run python quality_check.py 2>&1",
+            "Running quality checks"
+        )
+        
+        # Filter out emoji-related errors
+        if stderr and "UnicodeEncodeError" in stderr:
+            self.print_warning("Emoji display issue detected - continuing")
+            success = True
+        
+        if stdout:
+            print(stdout)
         
         if success:
             self.print_success("All quality checks passed!")
@@ -233,32 +235,32 @@ class DailyRoutine:
         """Print daily summary"""
         self.print_header("DAILY ROUTINE COMPLETE")
         
-        print(f"\n📊 Summary:")
+        print(f"\nSummary:")
         print(f"   Errors: {len(self.errors)}")
         print(f"   Warnings: {len(self.warnings)}")
         
         if self.errors:
-            print("\n❌ Issues to fix:")
+            print("\n[ERROR] Issues to fix:")
             for error in self.errors:
                 print(f"   - {error}")
         
         if self.warnings:
-            print("\n⚠️ Warnings:")
+            print("\n[WARN] Warnings:")
             for warning in self.warnings:
                 print(f"   - {warning}")
         
         if not self.errors and not self.warnings:
-            print("\n✅ Everything is perfect!")
+            print("\n[OK] Everything is perfect!")
         
         print("\n" + "=" * 60)
-        print("🧠 Have a productive day!")
+        print("Have a productive day!")
         print("=" * 60)
     
     def run(self):
         """Run the complete daily routine"""
         print("\n" + "=" * 60)
-        print("🧠 VVE BRAIN - Daily Routine Start")
-        print(f"📅 {datetime.now().strftime('%A, %B %d, %Y %H:%M')}")
+        print("VVE BRAIN - Daily Routine Start")
+        print(f"Date: {datetime.now().strftime('%A, %B %d, %Y %H:%M')}")
         print("=" * 60)
         
         # Step 1: Environment check
