@@ -6,7 +6,7 @@ The Complete VVE Governance and Financial Management System
 
 ```bash
 git clone https://github.com/hanshendrickx/vve-brain_V1.git
-cd vve-analysis_V1
+cd vve-brain_V1
 uv run python run.py
 ```
 
