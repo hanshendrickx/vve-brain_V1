@@ -19,29 +19,29 @@ class VVEBrain:
         self.data = {}
         self.results = {}
 
-        print("🧠 VVE BRAIN Initializing...")
+        print("[BRAIN] or (blank) VVE BRAIN Initializing...")
         print("=" * 60)
         self._init_database()
         self._load_all_data()
-        print("✅ VVE BRAIN Ready!")
+        print("[OK] VVE BRAIN Ready!")
         print("=" * 60)
 
     def _init_database(self):
         """Initialize the DuckDB database"""
-        print("📊 Initializing database...")
+        print("SUMMARY: Initializing database...")
         # Placeholder - will be implemented later
         pass
 
     def _load_all_data(self):
         """Load all data into memory"""
-        print("📊 Loading data...")
+        print("SUMMARY: Loading data...")
         # Placeholder - will be implemented later
         pass
 
     def run_complete_analysis(self):
         """Run complete VVE BRAIN analysis"""
         print("\n" + "=" * 80)
-        print("🧠 RUNNING COMPLETE VVE BRAIN ANALYSIS")
+        print("[BRAIN] or (blank) RUNNING COMPLETE VVE BRAIN ANALYSIS")
         print("=" * 80)
         print("📋 Analysis placeholder - coming soon!")
         print("✨ Your VVE BRAIN is ready for development!")

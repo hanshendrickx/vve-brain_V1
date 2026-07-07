@@ -8,7 +8,7 @@ color 0A
 
 echo.
 echo ============================================================
-echo 🧠 VVE BRAIN - GitHub Push
+echo [BRAIN] or (blank) VVE BRAIN - GitHub Push
 echo ============================================================
 echo.
 echo 📍 Current Directory: %CD%
@@ -17,13 +17,13 @@ echo.
 REM Check if we're in a git repository
 git status >nul 2>&1
 if %errorlevel% neq 0 (
-    echo ❌ Not a git repository!
+    echo [FAIL] Not a git repository!
     echo    Please run this from your project folder.
     pause
     exit /b 1
 )
 
-echo 📊 Current Status:
+echo SUMMARY: Current Status:
 echo.
 git status --short
 
@@ -96,7 +96,7 @@ goto complete
 
 :action_status
 echo.
-echo 📊 Current Status:
+echo SUMMARY: Current Status:
 echo.
 git status
 echo.
@@ -105,20 +105,20 @@ goto complete
 
 :invalid
 echo.
-echo ❌ Invalid choice. Please try again.
+echo [FAIL] Invalid choice. Please try again.
 pause
 goto complete
 
 :cancel
 echo.
-echo ❌ Operation cancelled.
+echo [FAIL] Operation cancelled.
 pause
 goto complete
 
 :complete
 echo.
 echo ============================================================
-echo ✅ Complete!
+echo [OK] Complete!
 echo ============================================================
 echo.
 echo 📂 Repository: https://github.com/hanshendrickx/vve-brain_V1

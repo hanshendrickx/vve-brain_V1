@@ -20,7 +20,7 @@ def fix_file(filepath):
         
         with open(filepath, 'w', encoding='utf-8') as f:
             f.write(new_content)
-        print(f"✅ Fixed: {filepath}")
+        print(f"[OK] Fixed: {filepath}")
         return True
     else:
         print(f"⏭️ Already correct: {filepath}")
@@ -48,7 +48,7 @@ def main():
             files_fixed += 1
     
     print("\n" + "=" * 60)
-    print(f"✅ Fixed {files_fixed} files")
+    print(f"[OK] Fixed {files_fixed} files")
     print("=" * 60)
 
 if __name__ == "__main__":

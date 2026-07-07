@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-🧠 VVE BRAIN - Main Entry Point
+[BRAIN] or (blank) VVE BRAIN - Main Entry Point
 """
 
 import sys
@@ -8,7 +8,7 @@ from pathlib import Path
 
 def main():
     print("=" * 60)
-    print("🧠 VVE BRAIN")
+    print("[BRAIN] or (blank) VVE BRAIN")
     print("The Complete VVE Governance and Financial Management System")
     print("=" * 60)
     
@@ -21,7 +21,7 @@ def main():
         brain.run_complete_analysis()
         
     except ImportError as e:
-        print(f"❌ Error importing VVE BRAIN: {e}")
+        print(f"[FAIL] Error importing VVE BRAIN: {e}")
         print("Make sure you have all dependencies installed.")
         print("Run: uv add pandas matplotlib plotly duckdb openpyxl wigglystuff")
 

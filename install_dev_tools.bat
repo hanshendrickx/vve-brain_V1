@@ -2,7 +2,7 @@
 REM install_dev_tools.bat - Install development tools
 
 echo ============================================================
-echo 🧠 VVE BRAIN - Installing Development Tools
+echo [BRAIN] or (blank) VVE BRAIN - Installing Development Tools
 echo ============================================================
 
 echo.
@@ -23,7 +23,7 @@ uv add --dev pre-commit
 
 echo.
 echo ============================================================
-echo ✅ Development tools installed!
+echo [OK] Development tools installed!
 echo ============================================================
 echo.
 echo 📋 Usage:

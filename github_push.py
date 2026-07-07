@@ -19,7 +19,7 @@ def run_command(cmd, description="", check=True):
 
 def main():
     print("=" * 60)
-    print("🧠 VVE BRAIN - GitHub Push with Quality Control")
+    print("[BRAIN] or (blank) VVE BRAIN - GitHub Push with Quality Control")
     print("=" * 60)
     
     # Step 1: Run quality checks
@@ -34,7 +34,7 @@ def main():
         print(stderr)
     
     if not success:
-        print("\n❌ Quality checks FAILED!")
+        print("\n[FAIL] Quality checks FAILED!")
         print("\nWhat would you like to do?")
         print("  1. Auto-fix and continue")
         print("  2. Push anyway (not recommended)")
@@ -48,9 +48,9 @@ def main():
             print("\n🔄 Running checks again...")
             run_command("uv run python quality_check.py")
         elif choice == "2":
-            print("\n⚠️ Pushing despite quality issues...")
+            print("\n[WARN] Pushing despite quality issues...")
         else:
-            print("\n❌ Push cancelled.")
+            print("\n[FAIL] Push cancelled.")
             sys.exit(0)
     
     # Step 2: Check git status
@@ -59,13 +59,13 @@ def main():
     
     stdout, stderr, success = run_command("git status --porcelain")
     if not stdout and success:
-        print("✅ No changes to commit.")
+        print("[OK] No changes to commit.")
         print("\n📤 Pushing to GitHub...")
         run_command("git push")
-        print("\n✅ Complete!")
+        print("\n[OK] Complete!")
         sys.exit(0)
     
-    print("\n📊 Changes detected:")
+    print("\nSUMMARY: Changes detected:")
     print(stdout)
     
     # Step 3: Commit
@@ -93,11 +93,11 @@ def main():
     
     if success:
         print("\n" + "=" * 60)
-        print("✅ SUCCESS! Code pushed to GitHub!")
+        print("[OK] SUCCESS! Code pushed to GitHub!")
         print(f"🌐 https://github.com/hanshendrickx/vve-brain_V1")
         print("=" * 60)
     else:
-        print("\n❌ Push failed!")
+        print("\n[FAIL] Push failed!")
         print(stderr)
 
 if __name__ == "__main__":
