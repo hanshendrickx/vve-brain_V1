@@ -1,0 +1,4 @@
+Split_Number,Address,Votes,Breukdelen,Linked_To
+A-93,Slotlaan 395pp,1,12,A-88
+A-94,Slotlaan 363pp,1,12,A-89
+A-95,Slotlaan 379pp,1,12,A-90
