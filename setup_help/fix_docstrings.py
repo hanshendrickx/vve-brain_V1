@@ -2,7 +2,6 @@
 fix_docstrings.py - Fix all invalid docstrings in src/ folder
 """
 
-import os
 from pathlib import Path
 
 def fix_file(filepath):

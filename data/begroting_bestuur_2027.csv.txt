@@ -1,0 +1,12 @@
+Post,Bedrag
+Bijdrage hoofdvereniging,40802
+Klein onderhoud,39140
+Onderhoud lift,10300
+Elektra,11330
+Schoonmaak,11330
+Verzekeringen,1648
+Beheerder,12269
+Bank,515
+Verenigingskosten,3090
+Reservering,118708
+Rente,-1803

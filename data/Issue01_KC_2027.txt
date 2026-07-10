@@ -1,0 +1,23 @@
+Bron,Post,Bedrag
+Bestuur,Bijdrage hoofdvereniging,40802
+Bestuur,Klein onderhoud,39140
+Bestuur,Onderhoud lift,10300
+Bestuur,Elektra,11330
+Bestuur,Schoonmaak,11330
+Bestuur,Verzekeringen,1648
+Bestuur,Beheerder,12269
+Bestuur,Bank,515
+Bestuur,Verenigingskosten,3090
+Bestuur,Reservering,118708
+Bestuur,Rente,-1803
+Twins,Rechtsbijstand,1298
+Twins,Bestuurdersaansprakelijkheid,350
+Twins,Onderhoud bouwkundig,39140
+Twins,Schoonmaken,11330
+Twins,Onderhoud lift,10300
+Twins,Elektraverbruik,11330
+Twins,Verenigingskosten,15915
+Twins,Bankkosten,515
+Twins,Bijdrage hoofdvereniging,40802
+Twins,Reservering,118708
+Twins,Rente,-1803

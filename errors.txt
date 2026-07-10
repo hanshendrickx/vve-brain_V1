@@ -1,0 +1,33 @@
+(vve-brain) C:\Users\hansh\VVE_BRAIN>uv run black src/ tests/  
+Warning: Python 3.13 cannot parse code formatted for Python 3.15. To fix this: run Black with Python 3.15, set --target-version to py313, or use --fast to skip the safety check. Black's safety check verifies equivalence by parsing the AST, which fails when the running Python is older than the target version.
+All done! ✨ 🍰 ✨
+15 files left unchanged.
+
+choices 1...6 of github_push.bat.... werken niet
+≡ƒôì Current Directory: C:\Users\hansh\VVE_BRAIN
+
+≡ƒôè Current Status:
+
+ M pyproject.toml
+?? errors.txt
+
+============================================================
+≡ƒôñ Choose an action:
+============================================================
+
+1. Add all files, commit, and push (Standard)
+2. Add all files, commit with custom message, and push
+3. Just push (if already committed)
+4. Pull latest changes (sync from GitHub first)
+5. Show status only
+6. Cancel
+
+Enter your choice (1-6): 1
+
+≡ƒôñ Adding all files...
+warning: in the working copy of 'pyproject.toml', LF will be replaced by CRLF the next time Git touches it
+
+≡ƒô¥ Committing...
+Enter commit message (or press Enter for default): 
+
+

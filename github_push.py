@@ -5,8 +5,6 @@ github_push.py - Push VVE BRAIN to GitHub with Quality Control
 
 import subprocess
 import sys
-import os
-from pathlib import Path
 from datetime import datetime
 
 def run_command(cmd, description="", check=True):
@@ -94,7 +92,7 @@ def main():
     if success:
         print("\n" + "=" * 60)
         print("[OK] SUCCESS! Code pushed to GitHub!")
-        print(f"🌐 https://github.com/hanshendrickx/vve-brain_V1")
+        print("🌐 https://github.com/hanshendrickx/vve-brain_V1")
         print("=" * 60)
     else:
         print("\n[FAIL] Push failed!")

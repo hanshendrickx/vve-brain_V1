@@ -6,7 +6,6 @@ Professional code quality control for VVE BRAIN
 
 import subprocess
 import sys
-import os
 from pathlib import Path
 from datetime import datetime
 
